@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./dist/swiper.min.css">
+  <style>
+    .swiper-container{
+      width: 300px;
+      height: 300px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" >
+          <img src="./img/1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/3.jpg" alt="">
+        </div>
+    </div>
+    <!-- 导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </div>
+  <script src="./dist/swiper.min.js"></script>
+  <script>
+      var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+        },
+        // 让swiper看起来是循环的
+        loop: true,
+        // 当swiper在触摸式阻止默认事件，默认为true，不跳转
+        preventClicks : false,
+
+      //   noSwiping : true,
+        autoplay: {
+          // 自动切换时间间隔
+          delay: 1000,
+          // 设置为true，切换到最后一个slide将停止自动切换
+          stopOnLastSlide: false,
+          // 当用户操作完swiper之后，是否禁用autoplay，默认为true，停止
+          disableOnInteraction: false,
+    },
+    });
+  </script>
+</body>
+</html>
